@@ -1,0 +1,61 @@
+body > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+
+/* Styles created use BEM convention */
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.navbar__slider {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -1px;
+  background-color: #000;
+  transition-property: left, width;
+  transition-duration: 0.5s;
+}
+
+.navbar__list {
+  width: min(90%, 1200px);
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__link {
+  color: #6e6e73;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.navbar__item:not(.navbar__item--active):hover > a {
+  color: #06c;
+}
+
+.navbar__item--active > a {
+  color: #000;
+}
+
+
+
